@@ -13,6 +13,10 @@ export VIRTUAL_ENV_DISABLE_PROMPT=1
 
 # --- Prompt Components ---
 
+# Shell level
+# Magenta
+local shell_level="%(2L.%F{5}%L%f .)"
+
 # Exit code
 # show a green if 0, red otherwise
 local exit_code="%(?.%F{2}.%F{1})%?%f"
@@ -46,4 +50,4 @@ function virtualenv_info {
 
 # The actual prompt line
 # Variables to reëvaluate each time must be \escaped
-PROMPT="${exit_code} ${user_host}${separator}${path_text} \$(virtualenv_info)${promptsign} "
+PROMPT="${shell_level}${exit_code} ${user_host}${separator}${path_text} \$(virtualenv_info)${promptsign} "
