@@ -1,0 +1,33 @@
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+bindkey -e
+# End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+
+zstyle ':completion:*' completer _complete _ignored
+zstyle ':completion:*' format 'Completing %d'
+zstyle ':completion:*' ignore-parents parent pwd .. directory
+zstyle ':completion:*' insert-unambiguous true
+zstyle ':completion:*' list-colors ''
+zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
+zstyle ':completion:*' matcher-list '' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' '+r:|[._-]=** r:|=**'
+zstyle ':completion:*' preserve-prefix '//[^/]##/'
+zstyle ':completion:*' verbose true
+zstyle :compinstall filename '$HOME/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+
+# Better than default, but not good
+PROMPT='%n@%m:%2~ %(!.#.$) '
+
+
+export ZSH_CONFIG=$HOME/.zsh
+
+# Automatically load more stuff
+for configfile in $ZSH_CONFIG/*.zsh(.N); do
+    source $configfile
+done
