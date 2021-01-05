@@ -42,7 +42,7 @@ for configfile in $ZSH_CONFIG/*.zsh(.N); do
     source $configfile
 done
 
-# ~/.local/source/zsh (last files)
+# ~/.local/share/zsh (last files)
 for configfile in $HOME/.local/share/zsh/*.last.zsh(.N); do
     source $configfile
 done

@@ -1,0 +1,6 @@
+# Aliases
+
+{{ if (eq .chezmoi.osRelease.id "void") }}
+# Alias for gpg2 on voidlinux
+alias gpg=gpg2
+{{ end }}
