@@ -2,7 +2,7 @@
 
 
 # Default editor (standard variable)
-export EDITOR=nano
+export EDITOR=micro
 
 # Default pager (standard variable)
 export PAGER=less
