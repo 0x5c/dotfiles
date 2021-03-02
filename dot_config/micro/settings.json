@@ -1,0 +1,8 @@
+{
+    "backup": false,
+    "clipboard": "terminal",
+    "colorscheme": "one-dark",
+    "diffgutter": true,
+    "savehistory": false,
+    "tabstospaces": true
+}
