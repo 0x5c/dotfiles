@@ -1,8 +1,10 @@
 {
     "backup": false,
-    "clipboard": "terminal",
+    "clipboard": "internal",
     "colorscheme": "one-dark",
     "diffgutter": true,
+    "mkparents": true,
     "savehistory": false,
+    "statusformatl": "$(filename) $(modified)($(line),$(col) $(percentage)% $(lines)) $(status.paste)| ft:$(opt:filetype) | $(opt:fileformat) | $(opt:encoding)",
     "tabstospaces": true
 }
