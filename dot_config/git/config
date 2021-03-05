@@ -1,7 +1,7 @@
 [user]
 	name = 0x5c
 	email = dev@0x5c.io
-	signingkey = 82039FC95E3FE970
+	signingkey = 0769EB87956FACD6FBD8F4C7A57F71C3176B9581
 [gpg]
 	program = gpg2
 [commit]
