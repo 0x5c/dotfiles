@@ -4,6 +4,9 @@
 
 # --- Setup ---
 
+# Loads the vcs_info module for the git branch info
+autoload -Uz vcs_info
+
 # Enables variable reëvaluation each time the prompt is displayed
 setopt prompt_subst
 
@@ -44,10 +47,30 @@ fi
 # Venv info, if applicable
 # Bright blue
 function virtualenv_info {
-    [[ -n "$VIRTUAL_ENV" ]] && echo "%F{12}v:${VIRTUAL_ENV##*/}%f "
+    [[ -n "$VIRTUAL_ENV" ]] && echo "%F{6}v:${VIRTUAL_ENV##*/}%f "
 }
 
+# Git branch info, if applicable
+# Teal
+function precmd_vcs_info() { vcs_info }
+precmd_functions+=( precmd_vcs_info )
+zstyle ':vcs_info:*' enable git
+zstyle ':vcs_info:git:*' check-for-changes true
+zstyle ':vcs_info:git:*' unstagedstr '*'
+zstyle ':vcs_info:git:*' stagedstr '+'
+zstyle ':vcs_info:git:*' formats '%F{12}g:%b%m%u%c%f '
+zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
+
++vi-git-untracked() {
+    if [[ $(git rev-parse --is-inside-work-tree 2> /dev/null) == 'true' ]] && \
+       git status --porcelain | grep -m 1 '^??' &>/dev/null
+    then
+        hook_com[misc]='?'
+    else
+        hook_com[misc]=''
+    fi
+}
 
 # The actual prompt line
 # Variables to reëvaluate each time must be \escaped
-PROMPT="${shell_level}${exit_code} ${user_host}${separator}${path_text} \$(virtualenv_info)${promptsign} "
+PROMPT="${shell_level}${exit_code} ${user_host}${separator}${path_text} \$(virtualenv_info)\$vcs_info_msg_0_${promptsign} "
