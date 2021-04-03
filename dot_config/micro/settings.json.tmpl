@@ -1,6 +1,10 @@
 {
     "backup": false,
+    {{- if (and (eq .chezmoi.os "linux") (contains "Microsoft" .chezmoi.kernel.osrelease)) }}
+    "clipboard": "terminal",
+    {{- else }}
     "clipboard": "internal",
+    {{- end }}
     "colorscheme": "one-dark",
     "diffgutter": true,
     "mkparents": true,
