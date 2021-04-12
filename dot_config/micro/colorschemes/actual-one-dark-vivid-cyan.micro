@@ -1,0 +1,46 @@
+color-link default "#bbbbbb,#21252C" #ivory
+color-link comment "#5C6370" #stone
+color-link comment.bright "#7e8289" #entirely made up on the spot
+color-link constant "#d55fde" #violet
+color-link constant.number "#E5C07B" #chalky
+color-link constant.string "#89ca78" #sage
+color-link constant.string.char "#00b494" #cyan
+color-link constant.string.url "underline italic #98C379"
+color-link constant.specialChar "#00b494" #cyan
+color-link diff-added "#00AF00"
+color-link diff-modified "#FFAF00"
+color-link diff-deleted "#D70000"
+color-link identifier "#61AFEF" #malibu
+color-link identifier.class "#61afef" #malibu
+color-link identifier.var "#ef596f" #coral
+color-link preproc "#d55fde" #violet
+color-link preproc.shebang "#00b494" #cyan
+color-link special "#d55fde" #violet
+color-link statement "#d55fde" #violet
+color-link symbol "#ABB2BF" #default
+color-link symbol.brackets "#ABB2BF" #default
+color-link symbol.operator "#00b494" #cyan
+color-link symbol.tag "#ef596f" #coral
+color-link todo "#FF8C00" #fixed
+color-link type "#66D9EF" #?????? - see below comment
+    # The way "type" is used, it has become meaningless.
+    # Used for types, some functions, data keys, and a whole bunch of nonsense.
+    # Making this "chalky" with actual types/classes in mind has
+    #  the side-effect of making YAML keys yellow.
+    # To make this work correctly, a bunch of language files will have
+    #  to be rewriten.
+color-link type.keyword "#d55fde" #violet
+color-link underlined "#e5c07b" #chalky
+
+# Micro Colours
+color-link color-column "#282C34"
+color-link tabbar "#F2F0EC,#2D2D2D"
+color-link statusline "#282828,#ABB2BF"
+color-link line-number "#636D83,#282C34"
+color-link indent-char "#515151"
+color-link current-line-number "#C6C6C6,#21252C"
+color-link cursor-line "#282C34"
+color-link divider "#ABB2BF"
+color-link gutter-error "#9B859D"
+color-link gutter-warning "#9B859D"
+color-link error "#D2A8A1"

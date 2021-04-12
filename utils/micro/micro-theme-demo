@@ -1,0 +1,47 @@
+default (color of the background and foreground for unhighlighted text)
+comment
+comment.bright (Some filetypes have distinctions between types of comments)
+identifier
+identifier.class (Also used for functions)
+identifier.macro
+identifier.var
+constant
+constant.bool
+constant.bool.true
+constant.bool.false
+constant.number
+constant.string
+constant.string.char
+constant.string.url
+constant.specialChar
+statement
+symbol
+symbol.brackets ({}()[] and sometimes <>)
+symbol.operator (Color operator symbols differently)
+symbol.tag (For html tags, among other things)
+preproc
+preproc.shebang (The #! at the beginning of a file that tells the os what script interpreter to use)
+type
+type.keyword (If you want a special highlight for keywords like private)
+special
+underlined
+error
+todo
+selection (Color of the text selection)
+statusline (Color of the statusline)
+tabbar (Color of the tabbar that lists open files)
+indent-char (Color of the character which indicates tabs if the option is enabled)
+line-number
+gutter-error
+gutter-warning
+diff-added
+diff-modified
+diff-deleted
+cursor-line
+current-line-number
+color-column
+ignore
+scrollbar
+divider (Color of the divider between vertical splits)
+message (Color of messages in the bottom line of the screen)
+error-message (Color of error messages in the bottom line of the screen)
