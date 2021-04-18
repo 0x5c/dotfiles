@@ -26,17 +26,27 @@ fi
 # use vim keybinds in line mode
 #bindkey -v
 
+# Custom zle widgets to have up/down arrow skip history dups
+function up_line_or_history() {
+    zle up-line-or-search ''
+}
+zle -N up_line_or_history
+function down_line_or_history() {
+    zle down-line-or-search ''
+}
+zle -N down_line_or_history
+
 # [Up-Arrow] - Up a line of history
 if [[ -n "${terminfo[kcuu1]}" ]]; then
-  bindkey -M emacs "${terminfo[kcuu1]}" up-line-or-history
-  bindkey -M viins "${terminfo[kcuu1]}" up-line-or-history
-  bindkey -M vicmd "${terminfo[kcuu1]}" up-line-or-history
+  bindkey -M emacs "${terminfo[kcuu1]}" up_line_or_history
+  bindkey -M viins "${terminfo[kcuu1]}" up_line_or_history
+  bindkey -M vicmd "${terminfo[kcuu1]}" up_line_or_history
 fi
 # [Down-Arrow] - Down a line of history
 if [[ -n "${terminfo[kcud1]}" ]]; then
-  bindkey -M emacs "${terminfo[kcud1]}" down-line-or-history
-  bindkey -M viins "${terminfo[kcud1]}" down-line-or-history
-  bindkey -M vicmd "${terminfo[kcud1]}" down-line-or-history
+  bindkey -M emacs "${terminfo[kcud1]}" down_line_or_history
+  bindkey -M viins "${terminfo[kcud1]}" down_line_or_history
+  bindkey -M vicmd "${terminfo[kcud1]}" down_line_or_history
 fi
 
 # start typing + [PageUp] - fuzzy find history forward
