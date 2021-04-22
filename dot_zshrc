@@ -14,6 +14,7 @@ zstyle ':completion:*' matcher-list '' 'm:{[:lower:][:upper:]}={[:upper:][:lower
 zstyle ':completion:*' preserve-prefix '//[^/]##/'
 zstyle ':completion:*' verbose true
 zstyle ':completion:*' special-dirs true
+zstyle ':completion:*' insert-tab false
 zstyle :compinstall filename '$HOME/.zshrc'
 
 autoload -Uz compinit
