@@ -71,6 +71,10 @@ zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
     fi
 }
 
+NEWLINE=$'\n'
+
+SEP='%F{234}------'
+
 # The actual prompt line
 # Variables to reëvaluate each time must be \escaped
-PROMPT="${shell_level}${exit_code} ${user_host}${separator}${path_text} \$(virtualenv_info)\$vcs_info_msg_0_${promptsign} "
+PROMPT="${SEP}${NEWLINE}${shell_level}${exit_code} ${user_host}${separator}${path_text} \$(virtualenv_info)\$vcs_info_msg_0_${promptsign} "
