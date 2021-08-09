@@ -59,6 +59,7 @@ zstyle ':vcs_info:git:*' check-for-changes true
 zstyle ':vcs_info:git:*' unstagedstr '*'
 zstyle ':vcs_info:git:*' stagedstr '+'
 zstyle ':vcs_info:git:*' formats '%F{12}g:%b%m%u%c%f '
+zstyle ':vcs_info:git:*' actionformats '%F{12}g:[%F{9}%a%F{12}]%b%m%u%c%f '
 zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
 
 +vi-git-untracked() {
