@@ -3,7 +3,7 @@
 	email = dev@0x5c.io
 	signingkey = 0769EB87956FACD6FBD8F4C7A57F71C3176B9581
 [gpg]
-	program = gpg2
+	program = gpg
 [commit]
 	gpgsign = true
 [init]
