@@ -33,7 +33,7 @@ def done():
 
 def strip_components(tarfile: tarfile.TarFile, level = 1):
     members = tarfile.getmembers()
-    total = len(members)
+    total = len(members) - 1
     for num, member in enumerate(members):
         member.path = "/".join(PurePath(member.path).parts[1:])
         print(f"\rExtracting  {num/total:>3.0%}  {num:>4}/{total}", end="")
