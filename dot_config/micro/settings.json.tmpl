@@ -2,6 +2,8 @@
     "backup": false,
     {{- if (and (eq .chezmoi.os "linux") (contains "Microsoft" .chezmoi.kernel.osrelease)) }}
     "clipboard": "terminal",
+    {{- else if .machineinfo.graphical }}
+        {{- /* no values set in this branch since micro removes defaults */}}
     {{- else }}
     "clipboard": "internal",
     {{- end }}
