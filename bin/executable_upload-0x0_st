@@ -1,0 +1,9 @@
+#!/bin/sh
+
+if [ -z "$1" ]
+  then
+    echo "No file found." >&2
+    exit 1
+fi
+
+curl -sS -F"file=@$1" https://0x0.st
