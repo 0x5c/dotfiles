@@ -1,5 +1,13 @@
 #!/bin/env python3
 
+"""
+Simple VSCode install script
+---
+(c) 2021-2022 0x5c
+SPDX-License-Identifier: CC-BY-SA-4.0
+"""
+
+
 import os
 import subprocess
 import sys

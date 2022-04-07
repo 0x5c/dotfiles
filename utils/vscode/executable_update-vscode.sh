@@ -1,5 +1,10 @@
 #!/bin/sh
 
+# Simple VSCode install script
+# (c) 2021-2022 0x5c
+# SPDX-License-Identifier: CC-BY-SA-4.0
+
+
 TAR_FILE='/tmp/code-stable-x64.tar.gz'
 DEST="/opt/vscode"
 
