@@ -1,0 +1,8 @@
+filetype: srcpkg
+
+detect:
+    filename: "template"
+    header: "^# Template file for '.*'$"
+
+rules:
+    - include: "shell"
