@@ -1,0 +1,15 @@
+filetype: patch
+
+detect:
+    filename: "\\.patch$"
+    header: "^From [0-9a-fA-F]+ Mon Sep 17 00:00:00 2001$"
+
+rules:
+    - include: "mail"
+    #- default:
+    #    start: "^diff --git .*$"
+    #    end: "^diff"
+    #    limit-group: "magenta"
+    #    rules:
+    #        - include: "diff"
+    - include: "diff"

@@ -1,0 +1,14 @@
+filetype: diff
+
+detect:
+    filename: "\\.diff$"
+    header: "^diff"
+
+rules:
+    - brightgreen: "^\\+.*"
+    - green: "^\\+\\+\\+.*"
+    - brightblue: "^ .*"
+    - brightred: "^-.*"
+    - red: "^---.*"
+    - brightyellow: "^@@.*"
+    - magenta: "^diff.*"

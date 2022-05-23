@@ -68,4 +68,4 @@ rules:
         end: "^ENDOFFILE"
         limit-group: "brightmagenta"
         rules:
-            - include: "patch"
+            - include: "diff"
