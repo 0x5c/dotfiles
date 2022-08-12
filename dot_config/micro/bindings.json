@@ -6,5 +6,8 @@
     "Ctrl-Right": "WordRight",
     "OldBackspace": "DeleteWordLeft",
     "Ctrl-Delete": "DeleteWordRight",
-    "CtrlUnderscore": "lua:comment.comment"
+    "CtrlUnderscore": "lua:comment.comment",
+    "Ctrl-K": "DeleteLine",
+    "CtrlUp": "ParagraphPrevious",
+    "CtrlDown": "ParagraphNext"
 }
