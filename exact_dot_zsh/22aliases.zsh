@@ -9,6 +9,9 @@ alias la='ls -la'
 # 'micro' is not a good sequence for typing fast
 alias m=micro
 
+# same for 'nvim'
+alias n='nvim -p'
+
 # Formatted zsh history
 alias hist='fc -liD'
 
