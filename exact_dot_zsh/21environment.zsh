@@ -6,3 +6,6 @@ export EDITOR=micro
 
 # Default pager (standard variable)
 export PAGER='less -R'
+
+# Prevent hard to parse riff output
+export RIFF='--no-adds-only-special'
