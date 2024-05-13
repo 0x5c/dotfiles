@@ -2,7 +2,7 @@
 
 
 # Default editor (standard variable)
-export EDITOR=micro
+export EDITOR=nvim
 
 # Default pager (standard variable)
 export PAGER='less -R'
