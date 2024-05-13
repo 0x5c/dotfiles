@@ -1,7 +1,7 @@
 filetype: git-commit
 
 detect:
-    filename: "^(.*[\\/])?(COMMIT_EDITMSG|TAG_EDITMSG)$"
+    filename: "^(.*[\\/])?(COMMIT_EDITMSG|TAG_EDITMSG|MERGE_MSG)$"
 
 rules:
     # Color keywords for closing issues (such as on Github)
@@ -60,12 +60,12 @@ rules:
                     - brightmagenta: ">8" 
 
     # Diffs (i.e. git commit --verbose)
-    - default:
-        start: "^diff --git .*$"
-        # Diff output puts a space before file contents on each line so this
-        # should never match valid diff output and extend highlighting to the
-        # end of the file
-        end: "^ENDOFFILE"
-        limit-group: "brightmagenta"
-        rules:
-            - include: "diff"
+    #- default:
+    #    start: "^diff --git .*$"
+    #    # Diff output puts a space before file contents on each line so this
+    #    # should never match valid diff output and extend highlighting to the
+    #    # end of the file
+    #    end: "^ENDOFFILE"
+    #    limit-group: "brightmagenta"
+    #    rules:
+    - include: "diff"
