@@ -1,5 +1,5 @@
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not vim.loop.fs_stat(lazypath) then
+if not vim.uv.fs_stat(lazypath) then
     vim.fn.system({
         "git",
         "clone",
@@ -9,7 +9,8 @@ if not vim.loop.fs_stat(lazypath) then
         lazypath,
     })
 end
-vim.opt.rtp:prepend(lazypath)
+
+vim.opt.rtp = vim.opt.rtp ^ lazypath
 
 require('lazy').setup(
     {
@@ -48,11 +49,6 @@ require('lazy').setup(
             'windwp/nvim-autopairs',
             event = "InsertEnter",
             config = true
-        },
-        {
-            'numToStr/Comment.nvim',
-            lazy = false,
-            config = true,
         },
         {
             "nvim-treesitter/nvim-treesitter",
